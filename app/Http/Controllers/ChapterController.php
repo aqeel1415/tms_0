@@ -3,31 +3,36 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Chapter;
+use App\Models\chapter;
+
+
 
 class ChapterController extends Controller
 {
 
     public function index(){
-        $Chapters = Chapter::all()->get();
-        return view('index' , compact('Chapters'));
+        $chapters = chapter::get();
+        return view('Chapter.index' , compact('chapters'));
     }
-/*
+
     public function getSingle($id){
-        $Article = chapter::find($id);
-        return view('single' , compact('Article'));
+        $token = chapter::find($id);
+        return view('Chapter.single' , compact('token'));
     }
+
 
     public function getNew(){
-        return view('new');
+        return view('Chapter.index');
     }
 
+
     public function postNew(Request $r){
-        $NewArticle = new chapter;
-        $NewArticle->title = $r->title;
-        $NewArticle->description = $r->description;
-        $NewArticle->save();
-        return back();
+        /*
+        chapter::create([
+        'title' => $r->title
+        ]);
+        return 'Chapter has been added ';*/
+        return $r;
     }
-*/
+
 }

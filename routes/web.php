@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/Chapter/' ,  [App\Http\Controllers\ChapterController::class, 'index'])->name('Chapter_home');
 Route::get('/Chapter/{id}' , [App\Http\Controllers\ChapterController::class, 'getSingle'])->name('Chapter_single');
-Route::get('/Chapter/new' , [App\Http\Controllers\ChapterController::class, 'getNew'])->name('Chapter_new.get');
+Route::get('/Chapter/create' , [App\Http\Controllers\ChapterController::class, 'getNew'])->name('Chapter_new.get');
 Route::post('/Chapter/new' , [App\Http\Controllers\ChapterController::class, 'postNew'])->name('Chapter_new.post');
 
 /*

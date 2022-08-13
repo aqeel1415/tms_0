@@ -9,5 +9,5 @@ class chapter extends Model
 {
     use HasFactory;
 
-    protected $Chapters = ['id', 'title'];
+    protected $table = "chapters";
 }
