@@ -19,46 +19,45 @@ Route::get('/', function () {
 
 
 Route::get('/Chapter/' ,  [App\Http\Controllers\ChapterController::class, 'index'])->name('Chapter_home');
+Route::get('/Chapter/create', [App\Http\Controllers\ChapterController::class, 'create'])->name('Chapter_create');
 Route::get('/Chapter/{id}' , [App\Http\Controllers\ChapterController::class, 'getSingle'])->name('Chapter_single');
-Route::get('/Chapter/create' , [App\Http\Controllers\ChapterController::class, 'getNew'])->name('Chapter_new.get');
 Route::post('/Chapter/new' , [App\Http\Controllers\ChapterController::class, 'postNew'])->name('Chapter_new.post');
 
+
+
+Route::get('/Level/' ,  [App\Http\Controllers\LevelController::class, 'index'])->name('Level_home');
+Route::get('/Level/create', [App\Http\Controllers\LevelController::class, 'create'])->name('Level_create');
+Route::get('/Level/{id}' , [App\Http\Controllers\LevelController::class, 'getSingle'])->name('Level_single');
+Route::post('/Level/new' , [App\Http\Controllers\LevelController::class, 'postNew'])->name('Level_new.post');
+
+
+
+Route::get('/Location/' ,  [App\Http\Controllers\LocationController::class, 'index'])->name('Location_home');
+Route::get('/Location/create', [App\Http\Controllers\LocationController::class, 'create'])->name('Location_create');
+Route::get('/Location/{id}' , [App\Http\Controllers\LocationController::class, 'getSingle'])->name('Location_single');
+Route::post('/Location/new' , [App\Http\Controllers\LocationController::class, 'postNew'])->name('Location_new.post');
+
+
+
+Route::get('/Student/' ,  [App\Http\Controllers\StudentController::class, 'index'])->name('Student_home');
+Route::get('/Student/create', [App\Http\Controllers\StudentController::class, 'create'])->name('Student_create');
+Route::get('/Student/{id}' , [App\Http\Controllers\StudentController::class, 'getSingle'])->name('Student_single');
+Route::post('/Student/new' , [App\Http\Controllers\StudentController::class, 'postNew'])->name('Student_new.post');
+
+
+Route::get('/Teacher/' ,  [App\Http\Controllers\TeacherController::class, 'index'])->name('Teacher_home');
+Route::get('/Teacher/create', [App\Http\Controllers\TeacherController::class, 'create'])->name('Teacher_create');
+Route::get('/Teacher/{id}' , [App\Http\Controllers\TeacherController::class, 'getSingle'])->name('Teacher_single');
+Route::post('/Teacher/new' , [App\Http\Controllers\TeacherController::class, 'postNew'])->name('Teacher_new.post');
+
+
+Route::get('/Unit/' ,  [App\Http\Controllers\UnitController::class, 'index'])->name('Unit_home');
+Route::get('/Unit/create', [App\Http\Controllers\UnitController::class, 'create'])->name('Unit_create');
+Route::get('/Unit/{id}' , [App\Http\Controllers\UnitController::class, 'getSingle'])->name('Unit_single');
+Route::post('/Unit/new' , [App\Http\Controllers\UnitController::class, 'postNew'])->name('Unit_new.post');
 /*
-
-Route::get('/Level/' , 'LevelController@index')->name('Level_home');
-Route::get('/Level/{id}' , 'LevelController@getSingle')->name('Level_single');
-Route::get('/Level/new' , 'LevelController@getNew')->name('Level_new.get');
-Route::post('/Level/new' , 'LevelController@postNew')->name('Level_new.post');
-
-
-Route::get('/Location/' , 'LocationController@index')->name('Location_home');
-Route::get('/Location/{id}' , 'LocationController@getSingle')->name('Location_single');
-Route::get('/Location/new' , 'LocationController@getNew')->name('Location_new.get');
-Route::post('/Location/new' , 'LocationController@postNew')->name('Location_new.post');
-
-
-Route::get('/Student/' , 'StudentController@index')->name('Student_home');
-Route::get('/Student/{id}' , 'StudentController@getSingle')->name('Student_single');
-Route::get('/Student/new' , 'StudentController@getNew')->name('Student_new.get');
-Route::post('/Student/new' , 'StudentController@postNew')->name('Student_new.post');
-
-
-
-Route::get('/Teacher/' , 'TeacherController@index')->name('Teacher_home');
-Route::get('/Teacher/{id}' , 'TeacherController@getSingle')->name('Teacher_single');
-Route::get('/Teacher/new' , 'TeacherController@getNew')->name('Teacher_new.get');
-Route::post('/Teacher/new' , 'TeacherController@postNew')->name('Teacher_new.post');
-
-
-Route::get('/Unit/' , 'UnitController@index')->name('Unit_home');
-Route::get('/Unit/{id}' , 'UnitController@getSingle')->name('Unit_single');
-Route::get('/Unit/new' , 'UnitController@getNew')->name('Unit_new.get');
-Route::post('/Unit/new' , 'UnitController@postNew')->name('Unit_new.post');
-
-
-Route::get('/Asset/' , 'AssetController@index')->name('Asset_home');
-Route::get('/Asset/{id}' , 'AssetController@getSingle')->name('Asset_single');
-Route::get('/Asset/new' , 'AssetController@getNew')->name('Asset_new.get');
-Route::post('/Asset/new' , 'AssetController@postNew')->name('Asset_new.post');
-
+Route::get('/Tool/' ,  [App\Http\Controllers\ToolController::class, 'index'])->name('Tool_home');
+Route::get('/Tool/create', [App\Http\Controllers\ToolController::class, 'create'])->name('Tool_create');
+Route::get('/Tool/{id}' , [App\Http\Controllers\ToolController::class, 'getSingle'])->name('Tool_single');
+Route::post('/Tool/new' , [App\Http\Controllers\ToolController::class, 'postNew'])->name('Tool_new.post');
 */

@@ -14,9 +14,11 @@ class CreateChaptersTable extends Migration
     public function up()
     {
         Schema::create('chapters', function (Blueprint $table) {
-            $table->id();
+            $table->integerIncrements('id');
             $table->string('title');
+            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
             $table->timestamps();
+            $table->integer('level_id')->unsigned()->nullable();
         });
     }
 

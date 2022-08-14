@@ -1,8 +1,3 @@
-
-
-
-
-
 <form method="post" action="{{route('Chapter_new.post')}}">
     @csrf
     <div class="col-auto">
