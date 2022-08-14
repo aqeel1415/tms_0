@@ -10,4 +10,5 @@ class chapter extends Model
     use HasFactory;
 
     protected $table = "chapters";
+    protected $fillable = ['title'];
 }
