@@ -55,9 +55,17 @@ Route::get('/Unit/' ,  [App\Http\Controllers\UnitController::class, 'index'])->n
 Route::get('/Unit/create', [App\Http\Controllers\UnitController::class, 'create'])->name('Unit_create');
 Route::get('/Unit/{id}' , [App\Http\Controllers\UnitController::class, 'getSingle'])->name('Unit_single');
 Route::post('/Unit/new' , [App\Http\Controllers\UnitController::class, 'postNew'])->name('Unit_new.post');
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> d0e45171ce6b45a21ba567139358d58b24a3960a
 Route::get('/Tool/' ,  [App\Http\Controllers\ToolController::class, 'index'])->name('Tool_home');
 Route::get('/Tool/create', [App\Http\Controllers\ToolController::class, 'create'])->name('Tool_create');
 Route::get('/Tool/{id}' , [App\Http\Controllers\ToolController::class, 'getSingle'])->name('Tool_single');
 Route::post('/Tool/new' , [App\Http\Controllers\ToolController::class, 'postNew'])->name('Tool_new.post');
+<<<<<<< HEAD
 */
+=======
+
+>>>>>>> d0e45171ce6b45a21ba567139358d58b24a3960a
