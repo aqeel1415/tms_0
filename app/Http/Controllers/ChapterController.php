@@ -31,7 +31,7 @@ class ChapterController extends Controller
         chapter::create([
         'title' => $r->title
         ]);
-        return view('welcome');
+        return 'Level has been added Successfully';
     }
 
 }

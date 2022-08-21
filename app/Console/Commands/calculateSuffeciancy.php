@@ -2,6 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Models\asset_shortage;
+use App\Models\chapter;
+use App\Models\chapter_asset;
+use App\Models\level;
 use Illuminate\Console\Command;
 
 class calculateSuffeciancy extends Command
@@ -11,14 +15,14 @@ class calculateSuffeciancy extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'calculate:sufficiancy';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'this function to recalculate sufficiancy of all assets to fulfil students needs';
 
     /**
      * Create a new command instance.
@@ -37,6 +41,10 @@ class calculateSuffeciancy extends Command
      */
     public function handle()
     {
-        return 0;
+        $r_ass = asset_shortage::where('id',4)->get();{
+            foreach($r_ass as $as){
+                $as->update(['required_amount'=> 4]);
+            }
+        }
     }
 }
