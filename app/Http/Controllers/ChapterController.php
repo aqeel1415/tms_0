@@ -30,9 +30,11 @@ class ChapterController extends Controller
 
     public function postNew(Request $r){
         chapter::create([
-        'title' => $r->title
+            'title' => $r->title,
+            'level_id' => $r->level_id
         ]);
         return 'Level has been added Successfully';
     }
+
 
 }

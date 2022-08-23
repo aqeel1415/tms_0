@@ -49,8 +49,8 @@ class StudentController extends Controller
             ->groupByRaw('level_id')
             ->get();
 
-      // return view('Student.count' , compact('students'));
-       return $students;
+       return view('Student.count' , compact('students'));
+       //return $students;
     }
 
 }

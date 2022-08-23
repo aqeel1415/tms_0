@@ -22,6 +22,8 @@ class CreateTeachersTable extends Migration
             $table->integer('consum_asst_amount_limit');
             $table->integer('unconsum_asst_amount');
             $table->integer('unconsum_asst_amount_limit');
+            $table->integer('unit_id')->unsigned()->nullable();
+            $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
             $table->timestamps();
         });
     }

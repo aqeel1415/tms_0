@@ -5,3 +5,4 @@
 @empty
     <p>There is no units</p>
 @endforelse
+<button type="button" onclick="window.location='{{ url('Unit/create') }}'">Add</button>

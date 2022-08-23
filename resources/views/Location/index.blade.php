@@ -5,3 +5,5 @@
 @empty
     <p>There is no locations</p>
 @endforelse
+
+<button type="button" onclick="window.location='{{ url('Location/create') }}'">Add</button>

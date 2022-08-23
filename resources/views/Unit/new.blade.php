@@ -2,6 +2,7 @@
     @csrf
     <div class="col-auto">
         <label class="visually-hidden">unit Title </label>
+        <br>
         <input type="text"  class="form-control-plaintext" placeholder="unit Title" name="title" >
     </div>
 

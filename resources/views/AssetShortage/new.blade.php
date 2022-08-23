@@ -1,12 +1,14 @@
-<form method="post" action="{{route('Student_new.post')}}">
+<form method="post" action="{{route('AssetShortage_new.post')}}">
     @csrf
     <div class="col-auto">
-        <label class="visually-hidden">Student Name </label>
-        <input type="text"  class="form-control-plaintext" placeholder="Student name" name="name" >
-        <label class="visually-hidden">Student Phone </label>
-        <input type="number"  class="form-control-plaintext" placeholder="Student Phone" name="phone" >
-        <label class="visually-hidden">Student Email </label>
-        <input type="text"  class="form-control-plaintext" placeholder="Student Email" name="email" >
+
+        <label class="visually-hidden">Level id </label>
+        <br>
+        <input type="number"  class="form-control-plaintext" placeholder="level_id" name="level_id" >
+        <br>
+        <label class="visually-hidden">Required Quantity </label>
+        <br>
+        <input type="number"  class="form-control-plaintext" placeholder="quantity" name="quantity" >
     </div>
 
     <div class="col-auto">

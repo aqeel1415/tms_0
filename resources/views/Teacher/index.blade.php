@@ -4,3 +4,5 @@
 @empty
     <p>There is no teachers</p>
 @endforelse
+
+<button type="button" onclick="window.location='{{ url('Teacher/create') }}'">Add</button>

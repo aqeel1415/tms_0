@@ -5,3 +5,7 @@
 @empty
     <p>There is no chapters</p>
 @endforelse
+
+<button type="button" onclick="window.location='{{ url('Chapter/create') }}'">Add</button>
+
+

@@ -5,3 +5,5 @@
 @empty
     <p>There is no levels</p>
 @endforelse
+
+<button type="button" onclick="window.location='{{ url('Level/create') }}'">Add</button>

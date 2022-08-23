@@ -2,7 +2,13 @@
     @csrf
     <div class="col-auto">
         <label class="visually-hidden">Teacher Title </label>
+        <br>
         <input type="text"  class="form-control-plaintext" placeholder="Teacher Title" name="title" >
+        <br>
+        <label class="visually-hidden">Unit id </label>
+        <br>
+        <input type="text"  class="form-control-plaintext" placeholder="Unit Title" name="unit_id" >
+        <br>
     </div>
 
     <div class="col-auto">

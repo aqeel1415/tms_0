@@ -5,3 +5,5 @@
 @empty
     <p>There is no students</p>
 @endforelse
+
+<button type="button" onclick="window.location='{{ url('Student/create') }}'">Add</button>

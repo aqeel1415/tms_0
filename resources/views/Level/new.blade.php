@@ -2,7 +2,9 @@
     @csrf
     <div class="col-auto">
         <label class="visually-hidden">Level Title </label>
+        <br>
         <input type="text"  class="form-control-plaintext" placeholder="Level Title" name="title" >
+        <br>
     </div>
 
     <div class="col-auto">
