@@ -33,6 +33,26 @@ class StudentController extends Controller
         ]);
         return 'Student has been added Successfully';
     }
+
+
+
+
+    public function countByLevelsAndChapters(){
+
+       /*
+       //this is a way to access all DB table using DB facade Note: "use Illuminate\Support\Facades\DB;"
+       $chapters = DB::table('chapters')->get();
+        */
+
+        $students= student::selectRaw('count(*) as students_count, chapter_id,level_id')
+            ->groupByRaw('chapter_id')
+            ->groupByRaw('level_id')
+            ->get();
+
+      // return view('Student.count' , compact('students'));
+       return $students;
+    }
+
 }
 
 

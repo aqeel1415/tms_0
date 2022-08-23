@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 namespace App\Http\Controllers;
 
+use App\Models\student;
 use Illuminate\Http\Request;
 use App\Models\chapter;
-
+use Illuminate\Support\Facades\DB;
 
 
 class ChapterController extends Controller

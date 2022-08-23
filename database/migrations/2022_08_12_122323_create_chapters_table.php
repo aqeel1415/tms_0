@@ -15,11 +15,11 @@ class CreateChaptersTable extends Migration
     {
         Schema::create('chapters', function (Blueprint $table) {
             $table->integerIncrements('id');
+            $table->integer('level_id')->unsigned()->nullable();
             $table->string('title');
             $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
             $table->timestamps();
-            $table->integer('level_id')->unsigned()->nullable();
-        });
+                    });
     }
 
     /**

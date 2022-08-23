@@ -18,11 +18,11 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/Chapter/' ,  [App\Http\Controllers\ChapterController::class, 'index'])->name('Chapter_home');
 Route::get('/Chapter/create', [App\Http\Controllers\ChapterController::class, 'create'])->name('Chapter_create');
 Route::get('/Chapter/{id}' , [App\Http\Controllers\ChapterController::class, 'getSingle'])->name('Chapter_single');
 Route::post('/Chapter/new' , [App\Http\Controllers\ChapterController::class, 'postNew'])->name('Chapter_new.post');
-
 
 
 Route::get('/Level/' ,  [App\Http\Controllers\LevelController::class, 'index'])->name('Level_home');
@@ -40,6 +40,7 @@ Route::post('/Location/new' , [App\Http\Controllers\LocationController::class, '
 
 
 Route::get('/Student/' ,  [App\Http\Controllers\StudentController::class, 'index'])->name('Student_home');
+Route::get('/Student/count' ,  [App\Http\Controllers\StudentController::class, 'countByLevelsAndChapters'])->name('Student_count');
 Route::get('/Student/create', [App\Http\Controllers\StudentController::class, 'create'])->name('Student_create');
 Route::get('/Student/{id}' , [App\Http\Controllers\StudentController::class, 'getSingle'])->name('Student_single');
 Route::post('/Student/new' , [App\Http\Controllers\StudentController::class, 'postNew'])->name('Student_new.post');
@@ -55,6 +56,16 @@ Route::get('/Unit/' ,  [App\Http\Controllers\UnitController::class, 'index'])->n
 Route::get('/Unit/create', [App\Http\Controllers\UnitController::class, 'create'])->name('Unit_create');
 Route::get('/Unit/{id}' , [App\Http\Controllers\UnitController::class, 'getSingle'])->name('Unit_single');
 Route::post('/Unit/new' , [App\Http\Controllers\UnitController::class, 'postNew'])->name('Unit_new.post');
+
+Route::get('/AssetShortage/' ,  [App\Http\Controllers\AssetShortageController::class, 'index'])->name('AssetShortage_home');
+Route::get('/AssetShortage/create', [App\Http\Controllers\AssetShortageController::class, 'create'])->name('AssetShortage_create');
+Route::get('/AssetShortage/{id}' , [App\Http\Controllers\AssetShortageController::class, 'getSingle'])->name('AssetShortage_single');
+Route::post('/AssetShortage/new' , [App\Http\Controllers\AssetShortageController::class, 'postNew'])->name('AssetShortage_new.post');
+
+Route::get('/ChapterAsset/' ,  [App\Http\Controllers\ChapterAssetController::class, 'index'])->name('ChapterAsset_home');
+Route::get('/ChapterAsset/create', [App\Http\Controllers\ChapterAssetController::class, 'create'])->name('ChapterAsset_create');
+Route::get('/ChapterAsset/{id}' , [App\Http\Controllers\ChapterAssetController::class, 'getSingle'])->name('ChapterAsset_single');
+Route::post('/ChapterAsset/new' , [App\Http\Controllers\ChapterAssetController::class, 'postNew'])->name('ChapterAsset_new.post');
 
 /*
 =======

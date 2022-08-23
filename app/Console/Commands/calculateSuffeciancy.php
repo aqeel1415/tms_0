@@ -6,6 +6,7 @@ use App\Models\asset_shortage;
 use App\Models\chapter;
 use App\Models\chapter_asset;
 use App\Models\level;
+use App\Models\student;
 use Illuminate\Console\Command;
 
 class calculateSuffeciancy extends Command
@@ -41,9 +42,13 @@ class calculateSuffeciancy extends Command
      */
     public function handle()
     {
-        $r_ass = asset_shortage::where('id',4)->get();{
+        $r_ass = asset_shortage::where('id',1)->get();{
             foreach($r_ass as $as){
-                $as->update(['required_amount'=> 4]);
+                $as->update(['required_amount'=> 200]);
+                $chapters = tms_db::table('students')
+                    ->select(tms_db::raw('count(*) as students_count, chapter_id'))
+                    ->groupBy('chapter_id')
+                    ->get();
             }
         }
     }

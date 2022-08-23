@@ -18,6 +18,10 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->integer('phone');
             $table->string('email');
+            $table->integer('level_id')->unsigned()->nullable();
+            $table->integer('chapter_id')->unsigned()->nullable();
+            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
+            $table->foreign('chapter_id')->references('id')->on('chapters')->onDelete('cascade');
             $table->timestamps();
         });
     }
