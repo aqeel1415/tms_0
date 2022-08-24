@@ -2,9 +2,9 @@
     @csrf
     <div class="col-auto">
 
-        <label class="visually-hidden">Level id </label>
+        <label class="visually-hidden">Asset id </label>
         <br>
-        <input type="number"  class="form-control-plaintext" placeholder="level_id" name="level_id" >
+        <input type="number"  class="form-control-plaintext" placeholder="asset_id" name="asset_id" >
         <br>
         <label class="visually-hidden">Required Quantity </label>
         <br>

@@ -3,7 +3,7 @@
     <div class="col-auto">
         <label class="visually-hidden">Teacher Title </label>
         <br>
-        <input type="text"  class="form-control-plaintext" placeholder="Teacher Title" name="title" >
+        <input type="text"  class="form-control-plaintext" placeholder="Teacher name" name="name" >
         <br>
         <label class="visually-hidden">Unit id </label>
         <br>

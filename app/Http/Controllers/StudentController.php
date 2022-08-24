@@ -31,7 +31,7 @@ class StudentController extends Controller
             'phone' => $r->phone,
             'email' => $r->email
         ]);
-        return 'Student has been added Successfully';
+        return redirect('/Student/')->withSuccess(['Student has been added successfully!']);
     }
 
 

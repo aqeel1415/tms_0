@@ -11,5 +11,5 @@ class asset_shortage extends Model
 
 
     protected $table = "asset_shortages";
-    protected $fillable = ['required_amount'];
+    protected $fillable = ['asset_id','required_amount'];
 }

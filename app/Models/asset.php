@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class asset extends Model
 {
     use HasFactory;
+    protected $table = "assets";
     protected $fillable = ['id','name','code_id','color','status','type','img','quantity','remarks'];
 }

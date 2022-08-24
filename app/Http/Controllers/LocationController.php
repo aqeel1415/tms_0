@@ -29,7 +29,7 @@ class LocationController extends Controller
         location::create([
             'title' => $r->title
         ]);
-        return 'Location has been added Successfully';
+        return redirect('/Location/')->withSuccess(['Location has been added successfully!']);
     }
 
 

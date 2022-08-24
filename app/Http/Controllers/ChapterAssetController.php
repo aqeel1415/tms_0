@@ -26,11 +26,12 @@ class ChapterAssetController extends Controller
 
     public function postNew(Request $r){
         chapter_asset::create([
+            'asset_id' => $r->asset_id,
             'chapter_id' => $r->chapter_id,
             'level_id' => $r->level_id,
             'assigned_amount' => $r->quantity
         ]);
-        return 'Asset has been assigned Successfully to the chapter';
+        return redirect('/ChapterAsset/')->withSuccess(['Asset has been assigned Successfully to the chapter']);
     }
 
 }

@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\asset;
+use App\Models\asset_shortage;
 use App\Models\chapter_asset;
 use Illuminate\Http\Request;
 
 class AssetShortageController extends Controller
 {
     public function index(){
-        $AssetShortages = chapter_asset::get();
+        $AssetShortages = asset_shortage::get();
         return view('AssetShortage.index' , compact('AssetShortages'));
     }
     public function getSingle($id){
-        $token = chapter_asset::find($id);
+        $token = asset_shortage::find($id);
         return view('AssetShortage.single' , compact('token'));
     }
 
@@ -24,12 +25,11 @@ class AssetShortageController extends Controller
 
 
     public function postNew(Request $r){
-        chapter_asset::create([
-            'level_id' => $r->title,
-            'chapter_id' => $r->title,
-            'quantity' => $r->title,
+        asset_shortage::create([
+            'asset_id' => $r->asset_id,
+            'required_amount' => $r->quantity,
         ]);
-        return 'Asset Shorted has been added Successfully';
+        return redirect('/AssetShortage/')->withSuccess(['Asset Shortage has been added Successfully']);
     }
 
 }

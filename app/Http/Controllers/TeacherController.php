@@ -25,10 +25,11 @@ class TeacherController extends Controller
 
     public function postNew(Request $r){
         teacher::create([
-            'title' => $r->title,
-            'unit_id' => $r->unit_id
+            'name' => $r->name,
+            'unit_id' => $r->unit_id,
 
         ]);
-        return 'Teacher has been added Successfully';
+
+        return redirect('/Teacher/')->withSuccess(['Teacher has been added successfully!']);
     }
 }

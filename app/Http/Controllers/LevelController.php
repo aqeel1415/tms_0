@@ -27,6 +27,6 @@ class LevelController extends Controller
         level::create([
             'title' => $r->title
         ]);
-        return 'Level has been added Successfully';
+        return redirect('/Level/')->withSuccess(['Level has been added successfully!']);
     }
 }

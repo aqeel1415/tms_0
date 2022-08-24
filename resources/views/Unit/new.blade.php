@@ -1,4 +1,4 @@
-<form method="post" action="{{route('unit_new.post')}}">
+<form method="post" action="{{route('Unit_new.post')}}">
     @csrf
     <div class="col-auto">
         <label class="visually-hidden">unit Title </label>

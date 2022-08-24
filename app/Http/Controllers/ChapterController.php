@@ -33,7 +33,7 @@ class ChapterController extends Controller
             'title' => $r->title,
             'level_id' => $r->level_id
         ]);
-        return 'Level has been added Successfully';
+        return redirect('/Chapter/')->withSuccess(['Chapter has been added successfully!']);
     }
 
 

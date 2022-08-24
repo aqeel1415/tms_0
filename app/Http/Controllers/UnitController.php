@@ -27,6 +27,6 @@ class UnitController extends Controller
         unit::create([
             'title' => $r->title
         ]);
-        return view('welcome');
+        return redirect('/Unit/')->withSuccess(['Unit has been added successfully!']);
     }
 }
